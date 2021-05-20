@@ -1,0 +1,77 @@
+html{
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+body{
+    margin:0;
+    padding:0;
+}
+section{
+    height: 100vh;
+    display: flex;
+    background-color: #03045E;
+}
+section h2{
+    margin:50px;
+    color: #F2F3D9;
+    animation:flicker 1.5s infinite alternate;
+    font-size: larger;
+    font-family: "Newsreader";
+    letter-spacing: 1px;
+}
+@keyframes flicker{
+    0%, 18%, 22%, 25%, 53%, 57%, 100%{
+        text-shadow: 
+        0 0 4px #F2F3D9,
+        0 0 11px #f2f3d9ec,
+        0 0 14px #f2f3d9c7,
+        0 0 40px #f2f3d99d,
+        0 0 80px #f2f3d96b,
+        0 0 100px #f2f3d959,
+        0 0 150px #f2f3d918;
+
+
+    } 
+}
+li{
+    display:flex;  
+    list-style:none;
+}
+#downbar{
+    position: fixed;
+    bottom: 5%;
+    margin:0px;
+    background-color: #F2F3D9;
+    border-radius: 5px;
+}
+.nav-link i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #443730;
+    opacity: 100%;
+    transition: all 0.3s;
+}
+.nav-link{
+    color: #F2F3D9;
+    text-decoration:none;
+    font-size: 25px;
+    font-family:"Montserrat",sans-serif ;
+}
+.nav-link .title{
+    position: absolute;
+    background-color: #F2F3D9;
+    height: 100%;
+    transform: rotate(-90deg);
+    transition:all 0.3s;
+    z-index: -1;
+    display: none;
+}
+.nav-link:hover .title{
+    transform: rotate(-90deg);
+    
+}
+.nav-link:hover .i{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #E9D2F4;
+}
